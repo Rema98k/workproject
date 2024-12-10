@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+
+
+body {
+    background: linear-gradient(90deg, #1F4E4E 0%, #49B4B4 50%);
+    font-family: 'Poppins';
+    line-height: 1.6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh; /* Osigurava da gradient ispuni ceo ekran */
+    margin: 0; /* Uklanja podrazumevane margine */
+  }
+
+  body, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+  }
+
+  .logo {
+    height: 50px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    flex:1;
+    margin:0;
+    padding:0;
+    justify-content: space-evenly;
+  }
+
+  .nav-links li{
+    margin: 0;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: black;
+  }
+
+  .content {
+    margin-top: 80px; /* Pomeraj sadržaj ispod navbar-a */
+  }
+  
+
+
+
+  .horizontal-bar {
+    display: flex; /* Postavlja polja u red */
+    justify-content: space-around; /* Ravnomerno raspoređuje polja */
+    align-items: center; /* Vertikalno poravnanje */
+    background-color: #78fff8; /* Boja pozadine trake */
+    width: 100%; /* Širina trake */
+    padding: 20px 0; /* Unutrašnji razmak (gore i dole) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Blaga senka */
+  }
+  
+  .image-box {
+    width: 200px; /* Širina svakog polja */
+    height: 200px; /* Visina svakog polja */
+    background-color: #78fff8; /* Boja pozadine polja */
+    border: 4px solid #ffffff; /* Obrub polja */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-box img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: cover; 
+    transition: transform 2.2s ease;
+  }
+
+  .image-box img:hover {
+    transform: scale(1.3);
+  }
+
+
+  #text-image-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh; /* Ista visina kao ekran */
+    margin-top: 80vh; /* Pomeramo ga za jednu visinu ekrana ispod prethodnog */
+    padding: 0 5%;
+ 
+  }
+
+
+  .text-image-section {
+    display: flex; /* Koristimo flexbox za raspodelu */
+    align-items: center; /* Poravnava sadržaj vertikalno */
+    justify-content: space-between; /* Razdvaja tekst i sliku */
+    height: 100vh; /* Ista visina kao ekran */
+    padding: 0 5%; /* Malo unutrašnjeg razmaka levo i desno */
+    background-color: #0B0F23; /* Neutralna pozadina */
+  }
+  
+  .text-content {
+    flex: 1; /* Tekst zauzima 50% prostora */
+    margin-right: 20px; /* Razmak između teksta i slike */
+  }
+  
+  .text-content h1 {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #ffffff; /* Tamno siva boja */
+    margin-bottom: 20px; /* Razmak ispod naslova */
+  }
+  
+  .text-content p {
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    color: #555; /* Svetlija siva boja */
+    line-height: 1.5; /* Razmak između redova */
+  }
+  
+  .image-content {
+    flex: 1; /* Slika zauzima 50% prostora */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Podesi da slika zauzme prostor bez distorzije */
+  }
