@@ -4,7 +4,7 @@
 
 
 body {
-    background: linear-gradient(90deg, #1F4E4E 0%, #49B4B4 50%);
+    background: linear-gradient(90deg, #1F4E4E 0%, #bfdada 70%);
     font-family: 'Poppins';
     line-height: 1.6;
     background-repeat: no-repeat;
@@ -69,7 +69,7 @@ body {
     display: flex; /* Postavlja polja u red */
     justify-content: space-around; /* Ravnomerno raspoređuje polja */
     align-items: center; /* Vertikalno poravnanje */
-    background-color: #78fff8; /* Boja pozadine trake */
+    background-color: rgba(11, 15, 35, 0.7); /* Boja pozadine trake */
     width: 100%; /* Širina trake */
     padding: 20px 0; /* Unutrašnji razmak (gore i dole) */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Blaga senka */
@@ -78,7 +78,7 @@ body {
   .image-box {
     width: 200px; /* Širina svakog polja */
     height: 200px; /* Visina svakog polja */
-    background-color: #78fff8; /* Boja pozadine polja */
+    background-color: #bfdada; /* Boja pozadine polja */
     border: 4px solid #ffffff; /* Obrub polja */
     display: flex;
     justify-content: center;
@@ -97,12 +97,16 @@ body {
   }
 
 
+
+
+
+
   #text-image-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100vh; /* Ista visina kao ekran */
-    margin-top: 80vh; /* Pomeramo ga za jednu visinu ekrana ispod prethodnog */
+    height: 60vh; /* Ista visina kao ekran */
+    margin-top: 20vh; /* Pomeramo ga za jednu visinu ekrana ispod prethodnog */
     padding: 0 5%;
  
   }
@@ -150,3 +154,51 @@ body {
     height: 100%;
     object-fit: fill; /* Podesi da slika zauzme prostor bez distorzije */
   }
+
+
+
+
+  .footer {
+    background-color: #0B0F23; /* Tamna pozadina za moderan izgled */
+    color: #FFFFFF; /* Svetla boja teksta */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Razmak između ikona */
+    margin-bottom: 10px;
+  }
+  
+  .social-links a {
+    display: inline-block;
+  }
+  
+  .social-links img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .social-links img:hover {
+    transform: scale(1.2); /* Uvećava ikonu prilikom prelaska miša */
+  }
+  
+  .footer p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
