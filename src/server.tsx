@@ -1,6 +1,7 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+import express, { Request, Response } from 'express';
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+import User from './user'; // Pretpostavljam da je User model u fajlu './user.ts'
 
 const app = express();
 const PORT = 5000;
@@ -9,10 +10,7 @@ const PORT = 5000;
 app.use(bodyParser.json());
 
 // Povezivanje sa MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/mojaBaza', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect('mongodb://127.0.0.1:27017/mojaBaza')
   .then(() => console.log('Povezivanje sa bazom je uspešno!'))
   .catch((err) => console.error('Greška pri povezivanju sa bazom:', err));
 
@@ -21,11 +19,8 @@ app.listen(PORT, () => {
   console.log(`Server radi na http://localhost:${PORT}`);
 });
 
-
-const User = require('./user');
-
 // Ruta za registraciju
-app.post('/api/register', async (req, res) => {
+app.post('/api/register', async (req: Request, res: Response) => {
   const { username, email, password } = req.body;
 
   try {
@@ -36,3 +31,4 @@ app.post('/api/register', async (req, res) => {
     res.status(500).json({ error: 'Greška pri registraciji korisnika.' });
   }
 });
+

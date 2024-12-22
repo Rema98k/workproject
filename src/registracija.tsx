@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import './styles.css'; // Već koristiš isti CSS fajl za stilizaciju
 import logo from './assets/logo.svg';
@@ -12,12 +11,14 @@ function Registracija() {
     password: "",
   });
 
-  const handleChange = (e) => {
+  // Tipiziranje parametra 'e' kao React.ChangeEvent<HTMLInputElement>
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  // Tipiziranje parametra 'e' kao React.FormEvent<HTMLFormElement>
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   
     // Slanje podataka na server

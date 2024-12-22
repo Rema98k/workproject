@@ -1,12 +1,9 @@
 import React from 'react';
 import './styles.css'; // Već koristiš isti CSS fajl za stilizaciju
 import logo from './assets/logo.svg';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
-
-
-
-function about() {
+const About: React.FC = () => {
   return (
     <div className="about-page">
       <nav className="navbar">
@@ -14,9 +11,9 @@ function about() {
         <ul className="nav-links">
           <li><Link to="/">Početna</Link></li>
           <li><Link to="/o-nama">O nama</Link></li>
-          <li><a href="#proizvodi">Proizvodi</a></li> {/* Ovo može ostati jer vodi na isti element */}
-          <li><a href="#kontakt">Kontakt</a></li>   {/* Ostaje jer je hash navigacija */}
-          <li><Link to="/registracija">Registracija</Link></li> {/* React Router navigacija */}
+          <li><a href="#proizvodi">Proizvodi</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><Link to="/registracija">Registracija</Link></li>
         </ul>
       </nav>
       <div className="about-content">
@@ -30,11 +27,11 @@ function about() {
           </p>
         </div>
         <div className="image-section">
-
+          {/* Slike ili drugi elementi mogu biti dodati ovde */}
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default about;
+export default About;
