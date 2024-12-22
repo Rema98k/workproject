@@ -20,7 +20,7 @@ function Home() {
           <ul className="nav-links">
               <li><Link to="/">Početna</Link></li>
               <li><Link to="/o-nama">O nama</Link></li>
-              <li><a href="#proizvodi">Proizvodi</a></li> {/* Ovo može ostati jer vodi na isti element */}
+              <li><Link to="/proizvodi">Proizvodi</Link></li>
               <li><a href="#kontakt">Kontakt</a></li>   {/* Ostaje jer je hash navigacija */}
               <li><Link to="/registracija">Registracija</Link></li> {/* React Router navigacija */}
           </ul>
@@ -28,10 +28,10 @@ function Home() {
 
         <div className="content">
           <div className="horizontal-bar">
-            <div className="image-box"><img src={plastika1} alt="Slika 1" /></div>
-            <div className="image-box"><img src={plastika2} alt="Slika 2" /></div>
-            <div className="image-box"><img src={plastika3} alt="Slika 3" /></div>
-            <div className="image-box"><img src={plastika4} alt="Slika 4" /></div>
+            <div className="image-box"><img src={plastika1} loading="lazy" alt="Slika 1" /></div>
+            <div className="image-box"><img src={plastika2} loading="lazy" alt="Slika 2" /></div>
+            <div className="image-box"><img src={plastika3} loading="lazy" alt="Slika 3" /></div>
+            <div className="image-box"><img src={plastika4} loading="lazy" alt="Slika 4" /></div>
           </div>
         </div>
 

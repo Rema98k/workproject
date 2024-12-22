@@ -4,6 +4,7 @@ import logo from './assets/logo.svg';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+
 function Registracija() {
   const [formData, setFormData] = useState({
     username: "",
@@ -11,14 +12,15 @@ function Registracija() {
     password: "",
   });
 
-  // Tipiziranje parametra 'e' kao React.ChangeEvent<HTMLInputElement>
+  // State za prikazivanje kalkulatora
+  const [showCalculator, setShowCalculator] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Tipiziranje parametra 'e' kao React.FormEvent<HTMLFormElement>
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
   
     // Slanje podataka na server
@@ -32,6 +34,11 @@ function Registracija() {
       });
   };
 
+  // Funkcija za promenu stanja kalkulatora
+  const toggleCalculator = () => {
+    setShowCalculator((prev) => !prev);
+  };
+
   return (
     <div className="about-page">
       <nav className="navbar">
@@ -39,15 +46,17 @@ function Registracija() {
         <ul className="nav-links">
           <li><Link to="/">Početna</Link></li>
           <li><Link to="/o-nama">O nama</Link></li>
-          <li><a href="#proizvodi">Proizvodi</a></li> {/* Ovo može ostati jer vodi na isti element */}
+          <li><Link to="/proizvodi">Proizvodi</Link></li>
           <li><a href="#kontakt">Kontakt</a></li>   {/* Ostaje jer je hash navigacija */}
           <li><Link to="/registracija">Registracija</Link></li> {/* React Router navigacija */}
         </ul>
       </nav>
 
-      <div className="about-content">
-        <div className="text-section">
-        </div>
+      <div className='Parent-text-registracija'>
+          <div className="text-Registracija">
+            <h1>Registrujte se da biste ostvarili popust na proizvode!</h1>
+            
+          </div>
         <div className="image-section"></div>
       </div>
 

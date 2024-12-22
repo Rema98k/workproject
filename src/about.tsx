@@ -11,7 +11,7 @@ const About: React.FC = () => {
         <ul className="nav-links">
           <li><Link to="/">Početna</Link></li>
           <li><Link to="/o-nama">O nama</Link></li>
-          <li><a href="#proizvodi">Proizvodi</a></li>
+          <li><Link to="/proizvodi">Proizvodi</Link></li>
           <li><a href="#kontakt">Kontakt</a></li>
           <li><Link to="/registracija">Registracija</Link></li>
         </ul>
